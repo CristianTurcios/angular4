@@ -42,7 +42,6 @@ export class FrutaComponent{
     //Se lanza el ngOnInit inmediatamente despues de cargar el constructor
     ngOnInit(){
       this.holaMundo(this.nombre);
-
     }
 
     holaMundo(nombre){

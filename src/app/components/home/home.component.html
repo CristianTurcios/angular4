@@ -1,0 +1,8 @@
+<h2>{{title}}</h2>
+<br>
+
+<input type="text" [(ngModel)]="clothe"><button type="button" name="button" (click)="addClothes()">add clothes</button>
+<h3>List of clothes</h3>
+<ul>
+  <li *ngFor="let clothe of listClothes; let i = index">{{clothe}} <button type="button" (click)="deleteClothe(i)">Delete Clothe</button></li>
+</ul>

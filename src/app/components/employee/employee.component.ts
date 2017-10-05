@@ -10,7 +10,7 @@ export class EmployeeComponent{
   public title:string = 'Title of component employee';
   public flagValue:boolean;
   public employee:Employee;
-  public workers:Array<Employee>
+  public workers:Array<Employee>;
   public color:string;
   public selectedColor:string;
   constructor(){
@@ -24,10 +24,6 @@ export class EmployeeComponent{
       new Employee('Dana Paola', 13, 'Home worker')
     ];
   }
-
-  // ngOnInit(){
-  //   console.log('workers', this.workers);
-  // }
 
   changeFlagValue(value){
     this.flagValue = !value;
