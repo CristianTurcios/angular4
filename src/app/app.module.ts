@@ -1,18 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+//Para poder usar el two ways data binding
+import { FormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { FrutaComponent } from './components/fruta/fruta.component';
-import { employee } from './components/employee/employee';
+import { EmployeeComponent } from './components/employee/employee.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FrutaComponent,
-    employee
+    EmployeeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

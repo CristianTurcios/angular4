@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
+export class Employee {
+  //El codigo comentado es equivalente a lo  esta descomentado
+  // public name:string;
+  // public age:number;
+  //
+  // constructor(name, age){
+  //   this.name = name;
+  //   this.age = age;
+  // }
 
-@Component({
-    selector: 'employee',
-    templateUrl: './employee.html'
-})
+  constructor(
+    public name:string,
+    public age:number,
+    public position:string){}
 
-export class employee{
-    public title = 'Title of component employee';
-    public name = 'Cristian Javier';
-    public lastName = 'Turcios Colindres';
 }

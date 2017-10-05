@@ -1,0 +1,31 @@
+<h3 style="color:blue">{{title}}</h3>
+<button type="button" name="button" (click)="changeFlagValue(flagValue)">Change Flag Value</button>
+<h2 *ngIf="flagValue">{{employee.name}} {{employee.age}} {{employee.position}}</h2>
+<h2 *ngIf="!flagValue">{{workers[0].name}} {{workers[0].age}} {{workers[0].position}}</h2>
+
+<hr>
+<h3>List of all employees</h3>
+<ul>
+  <li *ngFor="let employee of workers; let i = index"><strong>Employee {{i +1}}:</strong>
+    <ul>
+      <li>{{employee.name}}</li>
+      <li>{{employee.age}}</li>
+      <li>{{employee.position}}</li>
+    </ul>
+  </li>
+</ul>
+
+<hr>
+
+<h3>Switch Colors</h3>
+<ul [ngSwitch]="color">
+  <li *ngSwitchCase="'red'" [ngStyle]="{background: color, 'color': 'white', 'padding': '20px'}">The color is {{color}}</li>
+</ul>
+
+<hr>
+
+<h3 [class.bluebackground]="selectedColor === 'blue'">Color Selector</h3>
+<h3 [ngClass]="{'bluebackground': selectedColor === 'blue', 'greenbackground': selectedColor === 'green'}">This is only for example ngClass</h3>
+<input type="text" [(ngModel)]="selectedColor">
+<div [style.border]="selectedColor === 'red' ? '5px solid black' : '1px solid white'" [ngStyle]="{'background': selectedColor, 'width': '200px', 'height': '200px', 'float': 'right', 'margin-right': '70%'}"></div>
+<div style="clear: both"></div>
