@@ -11,7 +11,10 @@ export class HomeComponent{
   public title:string = 'Pagina principal';
   public listClothes:Array<string>;
   public clothe:string;
-  constructor(private _ClothesService: ClothesService){}
+  public date;
+  constructor(private _ClothesService: ClothesService){
+    this.date = new Date(2017, 4, 15);
+  }
 
   ngOnInit(){
     // console.log(this._ClothesService.nameClothes('T-shirt'));
