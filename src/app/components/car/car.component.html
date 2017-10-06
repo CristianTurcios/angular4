@@ -1,0 +1,46 @@
+<h1>Component of Car</h1>
+<style>
+
+div{
+  float: left;
+}
+form{
+  width: 150;
+}
+
+input[type="text"], span{
+  display: block;
+  width: 100%;
+}
+.list{
+  margin-left: 30px;
+}
+</style>
+<div>
+  <form #carForm="ngForm" (ngSubmit)="onSubmit() ; carForm.reset();">
+    <p>
+      <label for="">Name:</label>
+      <input type="text" name="name" #name="ngModel" [(ngModel)]="car.name" required>
+      <span *ngIf="name.touched && name.invalid">This field is required</span>
+    </p>
+    <p>
+      <label for="">horsePower:</label>
+      <input type="text" name="horsePower" #horsePower="ngModel" [(ngModel)]="car.horsePower" required pattern="[0-9]+">
+      <span *ngIf="horsePower.touched && horsePower.invalid && horsePower.su">This field is required or invalid</span>
+    </p>
+    <p>
+      <label for="">Color:</label>
+      <input type="text" name="color" #color="ngModel" [(ngModel)]="car.color" required pattern="[a-zA-Z#]+">
+      <span *ngIf="color.touched && color.invalid">This field is required or invalid</span>
+    </p>
+
+    <input type="submit" value="save" [disabled]="carForm.form.invalid">
+  </form>
+</div>
+
+<div class="list">
+  <h4>List of all cars</h4>
+  <ul>
+    <li *ngFor="let car of cars">{{car.name}} - {{car.horsePower}} - {{car.color}}</li>
+  </ul>
+</div>
