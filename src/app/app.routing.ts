@@ -7,6 +7,7 @@ import { FrutaComponent } from './components/fruta/fruta.component';
 import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { CarComponent } from './components/car/car.component';
+import { AngularTemplateComponent } from './components/AngularTemplate/AngularTemplate.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -16,6 +17,7 @@ const appRoutes: Routes = [
   {path: 'contact', component: ContactComponent},
   {path: 'contact/:page', component: ContactComponent},
   {path: 'car', component: CarComponent},
+  {path: 'AngularTemplate', component: AngularTemplateComponent},
   {path: '**', component: HomeComponent}
 ];
 

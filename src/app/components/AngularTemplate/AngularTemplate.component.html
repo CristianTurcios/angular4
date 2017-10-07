@@ -1,0 +1,14 @@
+<h4>{{title}}</h4>
+
+<div *ngIf='admin; then adminTemplate else noAdmin'>
+</div>
+
+<ng-template #adminTemplate>
+  <strong>Hello Admin!</strong>
+</ng-template>
+
+<ng-template #noAdmin>
+  <strong>Hello User!</strong>
+</ng-template>
+
+<button (click)="changeValue(admin)">Change Value</button>

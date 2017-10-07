@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ClothesService} from '../../services/clothes.Service';
+import { ClothesService }  from '../../services/clothes.Service';
 
 @Component({
   selector: 'home',
